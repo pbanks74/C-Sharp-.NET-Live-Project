@@ -114,7 +114,7 @@ We utilized a code-first programming methodology for this project. As a result, 
     }
     
 ### Blog Author Create / Edit pages 
-I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the create and edit pages for Blog Authors.
+I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the create and edit pages for Blog Authors. I created  text editors, text boxes and utilized placeholders and datepickers.
 
     <div class="BlogAuthor-CreateEdit--formContainer">
        <hr />

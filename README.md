@@ -217,4 +217,6 @@ I used bootstrap and CSS for styling while utilizing Razor syntax to create and 
       </div>
     </div>
  
-    
+ 
+## Conclusion
+The C# and .NET live project was incredibly fun, challenging, and immersive. This project gave me the chance to apply everything that I had learned in the course. It was a great and invaluable experience to work on a team and apply project methodologies. I enjoyed daily standup meetings, it was interesting to hear what others were working on. Listening to how they approached and solved the roadblocks they came across was very beneficial as it gave me ideas and insight on how to overcome my own future roadblocks. Working on a small piece of a larger project in the middle of its lifecycle taught me the importance of great teamwork and communication. It also taught me the importance of version control and I now feel comfortable and confident for when I am expected to utilize it responsibly working on my next team. Every aspect of this live project will be applied to my future technology career. I will use the methods and strategies I have been taught as well as the ones that I have learned were successful for other students to solve any and all future roadblocks. As challenging as the project was, I learned a lot and it built confidence for the future that I can do it.

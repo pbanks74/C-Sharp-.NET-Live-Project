@@ -115,7 +115,6 @@ We utilized a code-first programming methodology for this project. As a result, 
     
 ### Blog Author Create / Edit pages 
 I used bootstrap and CSS for styling while utilizing Razor syntax to build out and create and edit pages for Blog Authors.
-
     <div class="BlogAuthor-CreateEdit--formContainer">
        <hr />
        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -168,3 +167,6 @@ I used bootstrap and CSS for styling while utilizing Razor syntax to build out a
 
       </div>
     </div>
+    
+ ### Blog Author Delete / Details page
+ 

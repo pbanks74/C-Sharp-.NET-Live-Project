@@ -114,7 +114,8 @@ We utilized a code-first programming methodology for this project. As a result, 
     }
     
 ### Blog Author Create / Edit pages 
-I used bootstrap and CSS for styling while utilizing Razor syntax to build out and create and edit pages for Blog Authors.
+I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the create and edit pages for Blog Authors.
+
     <div class="BlogAuthor-CreateEdit--formContainer">
        <hr />
        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -169,4 +170,51 @@ I used bootstrap and CSS for styling while utilizing Razor syntax to build out a
     </div>
     
  ### Blog Author Delete / Details page
+ I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the delete and details pages for Blog Authors. I created Author cards utilizing bootstrap that had toggling nav tabs at the top that linked to the authors social media accounts, bio and blog posts. 
  
+    <!-- Toggling nav tabs -->
+
+      <ul class="nav nav-tabs BlogAuthor-DetDel--NavContainer mt-5">
+        <li class="active"><a data-toggle="tab" href="#details" class="btn btn-dark text-white BlogAuthor-DetDel--BtnTab">Author Details</a></li>
+        <li><a data-toggle="tab" href="#blogposts" class="btn btn-dark text-white BlogAuthor-DetDel--BtnTab">Blog Posts</a></li>
+      </ul>
+      
+      
+     <!-- Tab content -->
+     
+    <div class="tab-content">
+      <div id="details" class="tab-pane fade in active show">
+        <div class="BlogAuthor-DetDel--header">
+
+          <!--Author name -->
+          <div class="BlogAuthor-DetDel--Name">
+            <h3>@Html.DisplayFor(model => model.Name)</h3>
+          </div>
+          <!-- Social media accounts -->
+          <div class="BlogAuthor-DetDel--socialMedia">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+            <a class="BlogAuthor-DetDel--insta" href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+
+        </div>
+        <!-- Author Bio -->
+        <p class="BlogAuthor-DetDel--Bio">@Html.DisplayFor(model => model.Bio)</p>
+        <!--Author joined/left dates -->
+        <div class="BlogAuthor-DetDel--datetimeContainer">
+          <div class="BlogAuthor-DetDel--DisplayNameFor">
+            <p><strong>@Html.DisplayNameFor(model => model.Joined)</strong></p>
+            <p><strong>@Html.DisplayNameFor(model => model.Left)</strong></p>
+          </div>
+          <div class="BlogAuthor-DetDel--DisplayFor">
+            <p>@Html.DisplayFor(model => model.Joined)</p>
+            <p>@Html.DisplayFor(model => model.Left)</p>
+          </div>
+        </div>
+      </div>
+      <!-- Author's blog posts -->
+      <div id="blogposts" class="tab-pane fade">
+        <p>(Implemented in future stories).</p>
+      </div>
+    </div>
+ 
+    

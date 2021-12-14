@@ -114,7 +114,7 @@ We utilized a code-first programming methodology for this project. As a result, 
     }
     
 ### Blog Author Create / Edit pages 
-I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the create and edit pages for Blog Authors. I created text editors and text boxes while implementing placeholders and datepickers.
+I used Bootstrap and CSS for styling while utilizing Razor syntax to create and build out the create and edit pages for Blog Authors. I created text editors and text boxes while implementing placeholders and datepickers.
 
     <div class="BlogAuthor-CreateEdit--formContainer">
        <hr />
@@ -170,7 +170,7 @@ I used bootstrap and CSS for styling while utilizing Razor syntax to create and 
     </div>
     
  ### Blog Author Delete / Details page
- I used bootstrap and CSS for styling while utilizing Razor syntax to create and build out the delete and details pages for Blog Authors. I created Author cards utilizing bootstrap that had toggling nav tabs at the top that linked to the authors social media accounts, bio and blog posts. 
+I used Bootstrap and CSS for styling while utilizing Razor syntax to create and build out the delete and details pages for Blog Authors. I created Author cards utilizing Bootstrap that had toggling nav tabs at the top that linked to the authors social media accounts, bio and blog posts. 
  
     <!-- Toggling nav tabs -->
 

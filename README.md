@@ -98,7 +98,7 @@ I was first tasked with styling the home page of the theatre website. I utilized
     }
 
 ### Creating the Blog Author Model
-We utilized a code-first programming methodology for this project. As a result, I created a Blog Author model as well as a class defining it's properties. It was then necessary to apply migrations, update the database and add scaffolding to created the views.
+We utilized a code-first programming methodology for this project. As a result, I created a Blog Author model as well as a class defining it's properties. It was then necessary to apply migrations, update the database and add scaffolding to create the views.
 
     namespace TheatreCMS3.Areas.Blog.Models
     {
@@ -112,3 +112,59 @@ We utilized a code-first programming methodology for this project. As a result, 
             public DateTime? Left { get; set; }
         }
     }
+    
+### Blog Author Create / Edit pages 
+I used bootstrap and CSS for styling while utilizing Razor syntax to build out and create and edit pages for Blog Authors.
+
+    <div class="BlogAuthor-CreateEdit--formContainer">
+       <hr />
+       @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+      <div class="BlogAuthor-CreateEdit--TextContainer">
+        <div class="BlogAuthor-CreateEdit--Name">
+          @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+          <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+          </div>
+        </div>
+
+        <div class="BlogAuthor-CreateEdit--Bio">
+          @Html.LabelFor(model => model.Bio, htmlAttributes: new { @class = "control-label col-md-2" })
+          <div class="col-md-10">
+            @Html.TextAreaFor(model => model.Bio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Bio, "", new { @class = "text-danger" })
+          </div>
+        </div>
+      </div>
+      
+      <div class="BlogAuthor--DateTimeContainer">
+        <div class="BlogAuthor-CreateEdit--DateTime">
+          @Html.LabelFor(model => model.Joined, htmlAttributes: new { @class = "control-label col-md-2" })
+          <div class="BlogAuthor-CreateEdit--datefield">
+            @Html.EditorFor(model => model.Joined, new { htmlAttributes = new { @type="date", @class = "BlogAuthor-CreateEdit--datetime", placeholder = "mm/dd/yyyy" } })
+            @Html.ValidationMessageFor(model => model.Joined, "", new { @class = "text-danger" })
+          </div>
+        </div>
+
+        <div class="BlogAuthor-CreateEdit--DateTime">
+          @Html.LabelFor(model => model.Left, htmlAttributes: new { @class = "control-label col-md-2" })
+          <div class="BlogAuthor-CreateEdit--datefield">
+            @Html.EditorFor(model => model.Left, new { htmlAttributes = new { @type="date", @class = "BlogAuthor-CreateEdit--datetime", placeholder = "mm/dd/yyyy" } })
+            @Html.ValidationMessageFor(model => model.Left, "", new { @class = "text-danger" })
+          </div>
+        </div>
+      </div>
+        
+      <div class="BlogAuthor-CreateEdit--BtnContainer">
+
+        <div class="BlogAuthor-CreateEdit--backBtn">
+          @Html.ActionLink("Back to List", "Index", null, new { @class = " btn btn-dark" })
+        </div>
+
+        <div class="BlogAuthor-CreateEdit--createBtn">
+          <input type= "submit" value= "Create"  class=" btn btn-success " />
+        </div>
+
+      </div>
+    </div>

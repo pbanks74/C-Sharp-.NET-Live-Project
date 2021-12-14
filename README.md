@@ -97,4 +97,18 @@ I was first tasked with styling the home page of the theatre website. I utilized
         padding-left: 50px;
     }
 
-### Create Blog Author Model & CRUD pages
+### Creating the Blog Author Model
+We utilized a code-first programming methodology for this project. As a result, I created a Blog Author model as well as a class defining it's properties. It was then necessary to apply migrations, update the database and add scaffolding to created the views.
+
+    namespace TheatreCMS3.Areas.Blog.Models
+    {
+        public class BlogAuthor
+        {
+            [Key]
+            public int BlogAuthorId { get; set; }
+            public string Name { get; set; }
+            public string Bio { get; set; }
+            public DateTime Joined { get; set; }
+            public DateTime? Left { get; set; }
+        }
+    }

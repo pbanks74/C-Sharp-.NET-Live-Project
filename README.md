@@ -96,3 +96,5 @@ I was first tasked with styling the home page of the theatre website. I utilized
     .home-index--NAYA img {
         padding-left: 50px;
     }
+
+### Create Blog Author Model & CRUD pages
